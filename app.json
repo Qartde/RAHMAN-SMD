@@ -1,0 +1,143 @@
+{
+  "name":"Qartde",
+  "description":"Rahmani is the best whatsapp bot",
+  "keywords":["bot","node","baileys","whatsapp"],
+  "logo":"https://files.catbox.moe/aktbgo.jpg",
+  "repository":"https://github.com/Qartde/RAHMAN-SMD",
+  "succes_url":"/",
+  "stack":"container",
+     "env":{
+    "PREFIX":
+    {
+      "description":"Enter a symbol for your bot's prefix, e.g. . , ! ? Enter only one symbol",
+      "value":".",
+      "required":true
+    },
+    "AUTO_READ_MESSAGES":
+    {
+      "description":"If you want your bot to mark messages as read, enter |yes|, otherwise enter |no|", 
+      "value":"no", 
+      "required":true 
+    }, 
+    "AUTO_READ_STATUS":
+    {
+      "description":"If you want your bot to auto-see status updates, enter |yes|, otherwise enter |no|",
+      "value":"yes",
+      "required":true
+    }, "AUTO_DOWNLOAD_STATUS":
+    {
+      "description":"If you want your bot to save and send status updates to your inbox, enter |yes|, otherwise enter |no|",
+      "value":"no",
+      "required":true
+    }
+    ,
+     "PM_PERMIT" :
+     {
+      "description":"If you want anyone to be able to use your bot in private messages, enter |no|, otherwise enter |no|",
+      "value":"no",
+      "required":true
+    }
+    ,
+    "BOT_NAME" : {
+
+      "description":"Enter your bot's name",
+      "value":"RAHMANI-SMD",
+      "required":true
+
+    } ,
+     "BOT_MENU_LINKS" : {
+
+      "description":"Bot ke menu ki pic ka Link Likho",
+      "value":"https://files.catbox.moe/aktbgo.jpg",
+      "required":false
+
+     },
+    "PUBLIC_MODE":
+    {
+      "description":"If you want anyone to be able to use your bot, enter |yes|, otherwise enter |no|",
+      "value":"yes",
+      "required":true
+    }
+        ,
+    "HEROKU_API_KEY": {
+    "description": "Enter your Heroku API key",
+     "required":true
+    },
+   "HEROKU_APP_NAME": {
+    "description": "Enter the name of your Heroku app",
+     "required" :true
+    }  
+          ,
+    "SESSION_ID":
+    {
+      "description":"Enter your bot's session ID",   
+      "value":"",
+      "required": true
+
+    },
+    "OWNER_NAME":
+    {
+
+    "desc": "Enter your name",
+    "required": true,
+    "value": "Qartde"
+  },
+    "OWNER_NUMBER":
+  {
+
+    "desc": "Enter your phone number (without the + sign, e.g. 255xxxxxx)",
+    "required":true,
+    "value": "255693629079"
+  },
+    "WARN_COUNT":
+  {
+    "desc": "Enter the number of warnings before a user is blocked or removed from a group",
+    "required": true,
+    "value": "2"
+  },
+    "CHAT_BOT":
+    {
+      "desc": "If you want your bot to respond to messages, enter |yes|, otherwise enter |no|",
+      "required": true, 
+       "value": "no" 
+    }, 
+  "STARTING_BOT_MESSAGE":
+  {
+    "description": "If you want a starting message to be sent when the bot is connected, enter |yes|, otherwise enter |no|",
+    "required": true,
+    "value": "no"
+  },
+  "PRESENCE":{
+    "description":"Enter |online| to always show the bot as online, |typing| to show 'is typing...', |recording| to show 'is recording...', or leave blank for no presence",
+    "value":"",
+    "required": false
+  }  
+  },
+
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+
+  "formation": {
+                "worker": {
+                        "quantity": 1,
+                        "size": "basic"
+                }
+        },
+
+  "addons":[
+    {
+      "plan":"heroku-postgresql"
+    }
+  ]
+}
