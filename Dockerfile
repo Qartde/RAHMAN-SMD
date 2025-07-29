@@ -1,5 +1,6 @@
 FROM node:lts-buster
 
+# Install necessary packages
 RUN apt-get update && \
   apt-get install -y \
   ffmpeg \
@@ -8,17 +9,18 @@ RUN apt-get update && \
   apt-get upgrade -y && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
-  
-RUN git clone https://github.com/Qartde/RAHMAN-SMD.git  /root/Qartde
-WORKDIR /root/Qartde/
 
+# Create working directory
+WORKDIR /app
 
-COPY package.json .
-RUN npm install pm2 -g
-RUN npm install --legacy-peer-deps
-
+# Copy project files
 COPY . .
 
+# Install dependencies
+RUN npm install --legacy-peer-deps
+
+# Expose port if needed (optional for Heroku)
 EXPOSE 5000
 
+# Start the bot
 CMD ["node", "rahmani.js"]
