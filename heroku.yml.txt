@@ -2,4 +2,4 @@ build:
   docker:
       worker: Dockerfile
 run:
-   worker:   npm run rahmani.js
+   worker:   npm run rahmansmd
