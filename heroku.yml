@@ -1,5 +1,5 @@
 build:
   docker:
-    web: Dockerfile
+      worker: Dockerfile
 run:
-  web: node rahmani.js
+   worker:   npm run rahmani.js
