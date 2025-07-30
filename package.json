@@ -4,10 +4,11 @@
   "description": "",
   "main": "rahmani.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node rahmani.js",
     "s": "node rahmani.js",
     "rahmansmd": "pm2 start rahmani.js --attach --max-memory-restart 490M",
-    "c": "tsc"
+    "c": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "bot",
