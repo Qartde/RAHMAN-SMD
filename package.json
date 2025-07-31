@@ -2,12 +2,12 @@
   "name": "rahmani-smd",
   "version": "2.0.0",
   "description": "",
-  "main": "rahmani.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node rahmani.js",
-    "s": "node rahmani.js",
-    "toshtech": "pm2 start rahmani.js --attach",
-    "toshtech": "pm2 start rahmani.js --attach",
+    "test": "node index.js",
+    "s": "node index.js",
+    "toshtech": "pm2 start index.js --attach",
+    "toshtech": "pm2 start index.js --attach",
     "c": "tsc"
   },
   "keywords": [
